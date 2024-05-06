@@ -1,8 +1,8 @@
 import './button.css';
 
-const Button = ({ className = '',  title = '', type = 'primary', onClick }: { className?: string, title: string, type: 'primary' | 'secondary', onClick ?: () => any }) => {
-  return <button className={`${className } btn-type-${type}`} >
-    <span>{title}</span>
+const Button = ({ padding = '7px 25px', fontSize = 20, className = '',  title = '', type = 'primary', onClick }: { padding?: string, fontSize?: number, className?: string, title: string, type: 'primary' | 'secondary', onClick ?: () => any }) => {
+  return <button onClick={onClick} className={`${className } btn-type-${type}`} >
+    <span style={{ padding,  fontSize: `${fontSize}px` }} >{title}</span>
   </button>
 }
 

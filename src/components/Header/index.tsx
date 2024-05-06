@@ -39,9 +39,9 @@ function Header({}) {
 
     return <div className='main-menu'>
       {
-        menuData.map(item => {
+        menuData.map((item, i) => {
           return (
-            <Link to={item.path} className={`link ${active === item.path ? 'active' : ''}`} onClick={() => {
+            <Link key={`main-menu-${i}`} to={item.path} className={`link ${active === item.path ? 'active' : ''}`} onClick={() => {
               setActive(item.path);
               isDrawer && closeDrawer();
             }}>
