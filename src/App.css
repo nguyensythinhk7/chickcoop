@@ -59,6 +59,10 @@
   text-align: center;
 }
 
+.roadmap-item h3 {
+  min-height: 110px;
+}
+
 .roadmap-item ul {
   display: inline-block;
   margin: 0;
@@ -83,6 +87,12 @@
 
 li.roadmap-sub-content {
   text-align: justify;
+  font-size: 14px;
+}
+
+li.roadmap-sub-content.roadmap-sub-content-center {
+  text-align: center;
+  list-style: none;
 }
 
 /* width: 1920px;

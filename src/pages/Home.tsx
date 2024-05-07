@@ -114,7 +114,7 @@ const Home = () => {
 
           <div style={{ width: `${100/numberOfSlide}%`}} className='roadmap-item'>
             <img src={Q32024} alt={'Q3-2024'} />
-            <h3>Token Airdrop<br />& Listing</h3>
+            <h3>Q3 2024 <br />Token Airdrop<br />& Listing</h3>
             <ul>
               <li className='roadmap-sub-content'>Airdrop for User & Contributors</li>
               <li className='roadmap-sub-content'>Exchange listing</li>
@@ -123,7 +123,7 @@ const Home = () => {
 
           <div style={{ width: `${100/numberOfSlide}%`}} className='roadmap-item'>
             <img src={Q42024} alt={'Q4-2024'} />
-            <h3>NFT Launching<br />Restacking</h3>
+            <h3>Q4 2024 <br />NFT Launching<br />Restacking</h3>
             <ul>
               <li className='roadmap-sub-content'>NFT launch</li>
               <li className='roadmap-sub-content'>Restacking Mechanism</li>
@@ -137,7 +137,7 @@ const Home = () => {
             <img src={Q12025} alt={'Q1-2025'} />
             <h3>Q1 2025<br />Play with NFT</h3>
             <ul>
-              <li className='roadmap-sub-content'>Care for and hatch you<br />NFT to wait for the<br/>unexpected</li>
+              <li className='roadmap-sub-content roadmap-sub-content-center'>Care for and hatch you<br />NFT to wait for the<br/>unexpected</li>
             </ul>
           </div>
 
@@ -154,7 +154,7 @@ const Home = () => {
             <img src={Q32025} alt={'Q3-2025'} />
             <h3>Q3 2025<br />Universal Game <br />Lauch One-by-one</h3>
             <ul>
-              <li className='roadmap-sub-content'>To be continued...</li>
+              <li className='roadmap-sub-content roadmap-sub-content-center'>To be continued...</li>
             </ul>
           </div>
         </div>

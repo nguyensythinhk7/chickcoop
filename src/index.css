@@ -16,15 +16,14 @@
   font-weight: 900;
 }
 
-body, button, input, select, textarea{
-  font-weight: 400;
-  font-family: "Londrina Solid", sans-serif;
+body, button, input, select, textarea, .ant-carousel {
+  font-weight: 300;
+  font-family: "Londrina Solid", sans-serif !important;
   font-style: normal;
   color: #2D2D2D;
   font-size: 20px;
   margin: 0;
 }
-
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
