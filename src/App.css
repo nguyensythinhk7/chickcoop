@@ -95,12 +95,24 @@ li.roadmap-sub-content.roadmap-sub-content-center {
   list-style: none;
 }
 
-/* width: 1920px;
-  height: 1016px;
-  color: #fff;
-  text-align: 'center';
-  object-fit: contain;
-  background: url('./images/bg-roadmap.png'); */
+/* Home Farming  */
+.farming-slide {
+  position: relative;
+}
+
+.farming-content {
+  left: 10%;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+
+.arrow-container.arrow-container-farming {
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 0;
+}
 
 /** Airdrop page ********************************/
 

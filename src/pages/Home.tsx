@@ -1,6 +1,7 @@
 import Button from '../components/Button';
 import Banner from '../images/banner.png';
-import farming from '../images/farming-1.png';
+import farming1 from '../images/farming-1.png';
+import farming2 from '../images/farming-2.png';
 import { Carousel } from 'antd';
 import Q22024 from '../images/q2_2024.png';
 import Q32024 from '../images/q3_2024.png';
@@ -15,9 +16,18 @@ import { CarouselRef } from 'antd/es/carousel';
 
 const Home = () => {
   const carouselRoadMapRef = createRef<CarouselRef>();
+  const carouselFarmingRef = createRef<CarouselRef>();
 
   const joinDualEvent = () => {
     console.log("Join Dual Event...");
+  }
+
+  const joinEarlyRegister = () => {
+    console.log("Join Early Register...");
+  }
+
+  const joinReferralRace = () => {
+    console.log("Join Referral Race...");
   }
 
   const numberOfSlide = 3;
@@ -93,7 +103,38 @@ const Home = () => {
     </div>
 
     <div className='section-farming'>
-      <img className='img-full' src={farming} alt="farming" />
+      <Carousel ref={carouselFarmingRef} arrows={false} dots={false} infinite={true}>
+        <div className='farming-slide'>
+          <img className='img-full' src={farming1} alt="farming" />
+
+          <div className='farming-content'>
+            <h3 className='farming-title'>Farming Universe</h3>
+            <p className='farming-description'>
+              Chick Coop is not just a farm game; it's the beginning of Farmverse - a promising and vibrant farming world on the Telegram platform.
+            </p>
+            <Button className='btn-stroke2'  padding='15px 35px' fontSize={40} type='primary' title='Join Early Register' onClick={joinEarlyRegister} />
+            <div className="arrow-container arrow-container-farming">
+              <img src={ArrowPrev} className="arrow-prev" alt="arrow-prev" onClick={() => carouselFarmingRef?.current?.prev()} />
+              <img src={ArrowNext} className="arrow-next" alt="arrow-next" onClick={() => carouselFarmingRef?.current?.next()} />
+            </div>
+          </div>
+        </div>
+        <div className='farming-slide'>
+          <img className='img-full' src={farming2} alt="farming" />
+
+          <div className='farming-content'>
+            <h3 className='farming-title'>Farming Universe</h3>
+            <p className='farming-description'>
+            After Chick Coop, we'll immerse ourselves in a limitless creative system of farms with crops (Farming Game), fishing, cattle farming, and beyond.
+            </p>
+            <Button className='btn-stroke2'  padding='15px 35px' fontSize={40} type='secondary' title='Join Referral Race' onClick={joinReferralRace} />
+            <div className="arrow-container arrow-container-farming">
+              <img src={ArrowPrev} className="arrow-prev" alt="arrow-prev" onClick={() => carouselFarmingRef?.current?.prev()} />
+              <img src={ArrowNext} className="arrow-next" alt="arrow-next" onClick={() => carouselFarmingRef?.current?.next()} />
+            </div>
+          </div>
+        </div>
+      </Carousel>
     </div>
 
     <div className='section-roadmap'>

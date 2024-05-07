@@ -1,25 +1,39 @@
-.btn-type-primary {
+.btn-type-primary,
+.btn-type-secondary {
   border: 1px solid #2d2d22;
   display: inline-flex;
   padding: 0;
   border-radius: 7px;
   cursor: pointer;
 }
-
+.btn-type-secondary > span,
 .btn-type-primary > span {
-  background: #feac00;
   color: #fff;
   padding: 7px 25px;
   border-radius: 7px;
   font-size: 20px;
   line-height: 24px;
   -webkit-text-stroke: 1px #000;
+}
+
+.btn-type-primary > span {
+  background: #feac00;
   border-bottom: 6px solid #ce5705;
 }
 
 .btn-type-primary:hover > span {
   background: #e7a109;
   border-bottom: 6px solid #b9500a;
+}
+
+.btn-type-secondary > span {
+  background: #44A3F2;
+  border-bottom: 6px solid #2078C1;
+}
+
+.btn-type-secondary:hover > span {
+  background: #369cef;
+  border-bottom: 6px solid #1370bc;
 }
 
 .btn-stroke2 > span {
