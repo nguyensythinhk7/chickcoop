@@ -122,7 +122,7 @@ const Home = () => {
         <div className='farming-slide'>
           <img className='img-full' src={farming2} alt="farming" />
 
-          <div className='farming-content'>
+          <div className='farming-content farming-content2'>
             <h3 className='farming-title'>Farming Universe</h3>
             <p className='farming-description'>
             After Chick Coop, we'll immerse ourselves in a limitless creative system of farms with crops (Farming Game), fishing, cattle farming, and beyond.

@@ -96,6 +96,10 @@ li.roadmap-sub-content.roadmap-sub-content-center {
 }
 
 /* Home Farming  */
+h3.farming-title {
+  font-size: 45px;
+}
+
 .farming-slide {
   position: relative;
 }
@@ -106,6 +110,14 @@ li.roadmap-sub-content.roadmap-sub-content-center {
   position: absolute;
   top: 50%;
   transform: translate(0px, -50%);
+}
+
+.farming-content2 {
+  width: 24%;
+}
+
+p.farming-description {
+  font-size: 30px;
 }
 
 .arrow-container.arrow-container-farming {
