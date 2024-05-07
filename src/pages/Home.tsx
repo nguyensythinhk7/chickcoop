@@ -101,7 +101,7 @@ const Home = () => {
         <h3 style={{ margin: 0 }}>Roadmap</h3>
         <p style={{ margin: 0, fontWeight: 400 }}>(2024-2025)</p>
       </div>
-      <Carousel ref={carouselRoadMapRef} arrows dots={false} infinite={true}>
+      <Carousel ref={carouselRoadMapRef} arrows={false} dots={false} infinite={true}>
         <div className="roadmap-slide">
           <div style={{ width: `${100/numberOfSlide}%`}} className='roadmap-item'>
             <img src={Q22024} alt={'Q2-2024'} />
