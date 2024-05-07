@@ -5,6 +5,7 @@ import { AppContextProvider } from './provider/AppContext';
 import Home from './pages/Home';
 import Airdrop from './pages/Airdrop';
 import WhitePaper from './pages/WhitePaper';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/whitepaper" element={<WhitePaper />} />
           </Routes>
         </div>
+        <Footer />
       </AppContextProvider>
     </BrowserRouter>
   );

@@ -72,8 +72,8 @@ function Header({}) {
       </div>
 
       <div className='header-right'>
-          <SocialIcon className='item-right' bgColor="#303647" fgColor='#fff' url="https://twitter.com/chickcoop" />
-          <SocialIcon className='item-right' bgColor="#303647" fgColor='#fff' url="https://t.me/chickcoop" />
+          <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://x.com/chickcoop" />
+          <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://t.me/chickcoop" />
           <OwnButton className='item-right' type='primary' title='Play Now' onClick={playNow} />
       </div>
 

@@ -22,6 +22,7 @@ body, button, input, select, textarea{
   font-style: normal;
   color: #2D2D2D;
   font-size: 20px;
+  margin: 0;
 }
 
 

@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+}
+
 .img-full {
   width: 100%;
   height: 100%;
@@ -33,6 +37,60 @@
   -webkit-text-stroke: 5px #fff;
 }
 
+.section-roadmap {
+  object-fit: cover;
+  background: url('./images/bg-roadmap.png');
+}
+
+.roadmap-heading {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.roadmap-slide {
+  max-width: 800px;
+  width: 100%;
+  display: block !important;
+  margin: 0 auto;
+}
+
+.roadmap-item {
+  float: left;
+  text-align: center;
+}
+
+.roadmap-item ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.roadmap-item img {
+  display: inline-block !important;
+}
+
+.arrow-container {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.arrow-container img {
+  cursor: pointer;
+}
+
+li.roadmap-sub-content {
+  text-align: justify;
+}
+
+/* width: 1920px;
+  height: 1016px;
+  color: #fff;
+  text-align: 'center';
+  object-fit: contain;
+  background: url('./images/bg-roadmap.png'); */
 
 /** Airdrop page ********************************/
 

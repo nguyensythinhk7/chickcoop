@@ -1,0 +1,16 @@
+.footer.container {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.dividing-line-v {
+  display: inline-block;
+  width: 1px;
+  height: 36px;
+  background: #AFAFAF;
+  position: absolute;
+}
+
+.item-left {
+  margin-left: 30px;
+}
