@@ -29,3 +29,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.only-show-mobile {
+  display: none;
+}
+
+.item-left {
+  margin-left: 30px;
+}
+
+.item-right {
+  margin-right: 30px;
+}
+
+.item-right:last-child {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .only-show-mobile {
+    display: inline-block;
+  }
+
+  .item-left {
+    margin-left: 15px;
+  }
+  
+  .item-right {
+    margin-right: 15px;
+  }
+}

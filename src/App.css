@@ -42,6 +42,11 @@
   background: url('./images/bg-roadmap.png');
 }
 
+.section-roadmap-mobile {
+  background: url('./images/bg-road-map-mobile.png');
+  padding: 20px;
+}
+
 .roadmap-heading {
   text-align: center;
   padding: 100px 0;
@@ -71,6 +76,7 @@
 
 .roadmap-item img {
   display: inline-block !important;
+  width: 72px;
 }
 
 .arrow-container {
@@ -256,16 +262,18 @@ tr[data-row-key="25631"] {
   background: #FFDC20;
 }
 
+
+/** Responsive Page ********************************/
 @media screen and (max-width: 1200px) {
   .text-banner1 {
-    line-height: 100px;
-    font-size: 90px;
+    line-height: 120px;
+    font-size: 110px;
     -webkit-text-stroke: 5px #fff;
   }
 
   .text-banner2 {
-    line-height: 70px;
-    font-size: 60px;
+    line-height: 90px;
+    font-size: 80px;
     -webkit-text-stroke: 3px #fff;
   }
 }
@@ -277,8 +285,8 @@ tr[data-row-key="25631"] {
   }
 
   .text-banner2 {
-    line-height: 60px;
-    font-size: 50px;
+    line-height: 80px;
+    font-size: 70px;
   }
 }
 
@@ -286,17 +294,141 @@ tr[data-row-key="25631"] {
   .text-banner1 {
     line-height: 80px;
     font-size: 70px;
+    -webkit-text-stroke: 3px #fff;
   }
 
   .text-banner2 {
-    line-height: 55px;
-    font-size: 45px;
+    line-height: 70px;
+    font-size: 60px;
+    -webkit-text-stroke: 2px #fff;
+  }
+
+  .above-text {
+    top: 20%;
+  }
+
+  .above-text .btn-type-primary > span {
+    font-size: 27px !important;
+    padding: 10px 15px !important;
+    -webkit-text-stroke: 1px #000;
+  }
+
+  .menu-mobile a.link {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .roadmap-mobile {
+    display: inline-block;
+  }
+
+  .section-roadmap-mobile .roadmap-heading {
+    text-align: center;
+    padding: 35px 0;
+  }
+
+  .section-roadmap-mobile .roadmap-item h3 {
+    min-height: unset;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .road-map-box-content {
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  p.roadmap-sub-content {
+    margin: 0;
+    font-size: 17px;
+  }
+
+  .road-map-box-content h3 {
+    font-size: 20px;
+  }
+
+  .road-map-box-content h3:first-child {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .roadmap-item{
+    margin-bottom: 30px;
+  }
+
+  .mobile-farming-1,
+  .mobile-farming-2 {
+    text-align: center;
+    padding: 20px;
+    object-fit: cover;
+    background-image: url('./images/bg-farming-mobile.png');
+  }
+
+  .farming-title {
+    font-size: 32px;
+    margin: 0;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  p.farming-description {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 10%;
+  }
+
+  .airdrop-tabs-container-mobile .btn-type-3rd > span {
+    width: unset;;
+  }
+
+  .airdrop-content-top {
+    flex-direction: column;
+  }
+
+  .airdrop-content-top .btn-type-secondary {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .airdrop-content-top .btn-type-secondary > span {
+    width: 100%;
+  }
+
+  .airdrop-tabs-container-mobile td.ant-table-cell {
+    font-size: 17px;
+    font-weight: 600 !important;
+  }
+
+  .airdrop-tabs-container-mobile .ant-table-thead >tr>th {
+    font-size: 17px;
+  }
+
+  .airdrop-tabs-container-mobile .ant-table-cell {
+    padding: 10px !important;
+  }
+
+  .airdrop-tabs-container-mobile .ant-table-cell img {
+    width: 35px;
+  }
+
+  .col-rank {
+    font-size: 20px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .text-banner1 {
-    line-height: 60px;
+    line-height: 50px;
     font-size: 50px;
+  }
+
+  .text-banner2 {
+    line-height: 45px;
+    font-size: 40px;
+  }
+
+  .above-text {
+    top: 25%;
   }
 }

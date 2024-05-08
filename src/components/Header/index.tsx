@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import Logo from "../../images/logo.png";
 import { Link } from "react-router-dom";
 import { Button, Drawer } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
 import { SocialIcon } from 'react-social-icons'
 import OwnButton from '../Button';
+import buttonDrawer from '../../images/button-drawer.png';
 
 function Header({}) {
   const [active, setActive] = useState(() => {
@@ -21,7 +21,7 @@ function Header({}) {
   const [showDrawer, setShowDrawer] = React.useState(false);
   const closeDrawer = () => setShowDrawer(false);
 
-  const Menu = ({ isDrawer = false }) => {
+  const Menu = ({ isDrawer = false, className = '' }) => {
     const menuData = [
       {
         title: 'Home',
@@ -37,7 +37,7 @@ function Header({}) {
       }
     ]
 
-    return <div className='main-menu'>
+    return <div className={`main-menu ${className}`}>
       {
         menuData.map((item, i) => {
           return (
@@ -50,6 +50,8 @@ function Header({}) {
           )
         })
       }
+
+      {renderSocialAndPlayNow()}
     </div>
   }
 
@@ -57,31 +59,35 @@ function Header({}) {
     console.log("Play Now...");
   }
 
+  const renderSocialAndPlayNow = () => {
+    return <>
+      <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://x.com/chickcoop" />
+      <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://t.me/chickcoop" />
+      <OwnButton className='item-right' type='primary' title='Play Now' onClick={playNow} />
+    </>
+  }
+
   return (
     <header className='container main-header'>
-      <Button className='only-show-mobile' type='default' onClick={() => setShowDrawer(true)}>
-        <MenuOutlined />
-      </Button>
-
       <div className="header-left">
         <a href="/" className="logo">
           <img src={Logo} alt="logo" className="img-logo" />
         </a>
 
-        <Menu />
+        <Menu className="hide-mobile" />
       </div>
 
-      <div className='header-right'>
-          <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://x.com/chickcoop" />
-          <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://t.me/chickcoop" />
-          <OwnButton className='item-right' type='primary' title='Play Now' onClick={playNow} />
+      <div className='header-right hide-mobile'>
+          {renderSocialAndPlayNow()}
       </div>
+
+      <Button className='only-show-mobile' type='text' onClick={() => setShowDrawer(true)}>
+        <img src={buttonDrawer} alt="button drawer" />
+      </Button>
 
       <Drawer className='custom-drawer' destroyOnClose open={showDrawer} title="" onClose={closeDrawer}>
-        <Menu isDrawer={true} />
+        <Menu className='menu-mobile' isDrawer={true} />
       </Drawer>
-
-
     </header>
   );
 }

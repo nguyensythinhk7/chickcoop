@@ -1,7 +1,7 @@
 import { ReactNode, createRef, useEffect, useState } from 'react';
 import Button from '../components/Button';
 import AirdropBanner from '../images/airdrop-banner.png';
-import { Avatar, Tabs, Space, Table, Tag } from 'antd';
+import { Avatar, Tabs, Table } from 'antd';
 import avatar1 from '../images/avatar_1.png';
 import avatar2 from '../images/avatar_2.png';
 import avatar3 from '../images/avatar_3.png';
@@ -15,6 +15,7 @@ import top1 from '../images/top_1.png';
 import top2 from '../images/top_2.png';
 import top3 from '../images/top_3.png';
 import { TableRef } from 'antd/es/table';
+import { isMobile } from '../utils';
 
 const Airdrop = () => {
   const [airdropData, setAirdropData] = useState({
@@ -198,11 +199,11 @@ const Airdrop = () => {
   const tabs = [
     {
       id: "task",
-      button: <Button className='btn-task' type='3rd' padding='15px 35px' fontSize={40} title='Task' />
+      button: <Button className='btn-task' type='3rd' padding={isMobile() ? '10px 20px' : '15px 35px'} fontSize={isMobile() ? 25 : 40} title='Task' />
     },
     {
       id: "ranking",
-      button: <Button className='btn-ranking' type='3rd' padding='15px 35px' fontSize={40} title='Ranking' />
+      button: <Button className='btn-ranking' type='3rd' padding={isMobile() ? '10px 20px' : '15px 35px'} fontSize={isMobile() ? 25 : 40} title='Ranking' />
     }
   ]
 
@@ -210,7 +211,14 @@ const Airdrop = () => {
     // Ranking Content 
     if(type === "ranking") {
       return <div className='airdrop-content'>
-        <Table pagination={false} columns={columns} dataSource={data} />
+        <Table 
+          pagination={false} 
+          columns={columns} 
+          dataSource={data} 
+          scroll={{
+            x: 375,
+          }}
+        />
     </div>
     }
 
@@ -286,9 +294,9 @@ const Airdrop = () => {
       <img className='img-full' src={AirdropBanner} alt='airdrop banner' />
 
       <Tabs
-        className='airdrop-tabs-container'
+        className={`airdrop-tabs-container ${isMobile() ? "airdrop-tabs-container-mobile" : ""}`}
         defaultActiveKey="1"
-        tabPosition={'left'}
+        tabPosition={isMobile() ? 'top' : 'left'}
         items={tabs.map((tab) => {
           const id = tab.id;
           return {

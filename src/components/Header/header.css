@@ -42,25 +42,3 @@
   font-weight: 600;
   -webkit-text-stroke: 1px #2D2D2D;
 }
-
-.item-right {
-  margin-right: 30px
-}
-
-.item-right:last-child {
-  margin: 0;
-}
-
-.only-show-mobile {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .hide-mobile {
-    display: none;
-  }
-
-  .only-show-mobile {
-    display: inline-block;
-  }
-}
