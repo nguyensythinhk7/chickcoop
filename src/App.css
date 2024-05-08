@@ -252,6 +252,10 @@ p.farming-description {
   justify-content: center;
 }
 
+tr[data-row-key="25631"] {
+  background: #FFDC20;
+}
+
 @media screen and (max-width: 1200px) {
   .text-banner1 {
     line-height: 100px;
@@ -262,6 +266,7 @@ p.farming-description {
   .text-banner2 {
     line-height: 70px;
     font-size: 60px;
+    -webkit-text-stroke: 3px #fff;
   }
 }
 

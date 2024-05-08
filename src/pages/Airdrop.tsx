@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, createRef, useEffect, useState } from 'react';
 import Button from '../components/Button';
 import AirdropBanner from '../images/airdrop-banner.png';
 import { Avatar, Tabs, Space, Table, Tag } from 'antd';
@@ -14,10 +14,13 @@ import iconChecked from '../images/icon_checked.png';
 import top1 from '../images/top_1.png';
 import top2 from '../images/top_2.png';
 import top3 from '../images/top_3.png';
+import { TableRef } from 'antd/es/table';
 
 const Airdrop = () => {
   const [airdropData, setAirdropData] = useState({
     yourRef: 'http://www.labdrill.com',
+    idTelegram: '490124124212',
+    rank: '25631',
     avatars: [
       {
         image: avatar1
@@ -36,6 +39,8 @@ const Airdrop = () => {
       },
     ]
   });
+
+  const airdropTableRef = createRef<TableRef>();
 
   const columns = [
     {
@@ -71,10 +76,15 @@ const Airdrop = () => {
       title: 'ID Telegram',
       dataIndex: 'id_telegram',
       key: 'id_telegram',
-      render: (id_telegram: { image?: any, id?: string | number}) => <div>
-        <Avatar style={{ marginRight: 4 }} src={id_telegram.image} />
-        <span className='font-black'>#{id_telegram.id}</span>
-      </div>,
+      render: (id_telegram: { image?: any, id?: string | number}) => {
+        if(id_telegram.id?.toString() === airdropData.idTelegram) {
+          
+        }
+        return <div id={`${id_telegram.id?.toString() === airdropData.idTelegram ? 'your_id_telegram' : ''}`}>
+          <Avatar style={{ marginRight: 4 }} src={id_telegram.image} />
+          <span className='font-black'>#{id_telegram.id}</span>
+        </div>;
+      },
       align: 'center' as 'center',
     },
   ];
@@ -176,35 +186,13 @@ const Airdrop = () => {
       referrals: '100k+',
       id_telegram: {
         image: '',
-        id: 23132131232,
+        id: 490124124212,
       }
     },
   ];
 
   useEffect(() => {
     // call Api get data airdrop
-    const fakeData = {
-      yourRef: 'http://www.labdrill.com',
-      avatars: [
-        {
-          image: avatar1
-        },
-        {
-          image: avatar2
-        },
-        {
-          image: avatar3
-        },
-        {
-          image: avatar4
-        },
-        {
-          total: '142k+'
-        },
-      ]
-    }
-
-    setAirdropData(fakeData);
   }, []);
 
   const tabs = [
