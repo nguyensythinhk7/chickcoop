@@ -51,7 +51,7 @@ function Header({}) {
         })
       }
 
-      {renderSocialAndPlayNow()}
+      {isDrawer && renderSocialAndPlayNow()}
     </div>
   }
 

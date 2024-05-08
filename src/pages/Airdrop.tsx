@@ -227,8 +227,8 @@ const Airdrop = () => {
       <div className='airdrop-content-top'>
         <div className='group-social-left'>
           <Avatar.Group
-            maxCount={4}
-            // maxPopoverTrigger="click"
+            maxCount={ isMobile() ? 2 : 4 }
+            maxPopoverTrigger="click"
             size="large"
             maxStyle={{
               color: '#fff',
