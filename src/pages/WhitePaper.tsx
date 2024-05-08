@@ -1,5 +1,5 @@
 const WhitePaper = () => {
-  return <div>WhitePaper</div>
+  return <div className="coming-soon">Coming soon</div>
 }
 
 export default WhitePaper;

@@ -98,7 +98,7 @@ const Home = () => {
       <div className='above-text'>
         <h1 className='text-banner text-banner1'>PLAY - TO</h1>
         <h2 className='text-banner text-banner2'>AIR DROP</h2>
-        <Button className='btn-stroke2'  padding='15px 35px' fontSize={40} type='primary' title='Join Dual Event' onClick={joinDualEvent} />
+        <Button className='btn-stroke2'  padding='15px 35px' fontSize={35} type='primary' title='Join Dual Event' onClick={joinDualEvent} />
       </div>
     </div>
 
@@ -112,7 +112,7 @@ const Home = () => {
             <p className='farming-description'>
               Chick Coop is not just a farm game; it's the beginning of Farmverse - a promising and vibrant farming world on the Telegram platform.
             </p>
-            <Button className='btn-stroke2'  padding='15px 35px' fontSize={40} type='primary' title='Join Early Register' onClick={joinEarlyRegister} />
+            <Button className='btn-stroke2'  padding='15px 35px' fontSize={35} type='primary' title='Join Early Register' onClick={joinEarlyRegister} />
             <div className="arrow-container arrow-container-farming">
               <img src={ArrowPrev} className="arrow-prev" alt="arrow-prev" onClick={() => carouselFarmingRef?.current?.prev()} />
               <img src={ArrowNext} className="arrow-next" alt="arrow-next" onClick={() => carouselFarmingRef?.current?.next()} />
@@ -127,7 +127,7 @@ const Home = () => {
             <p className='farming-description'>
             After Chick Coop, we'll immerse ourselves in a limitless creative system of farms with crops (Farming Game), fishing, cattle farming, and beyond.
             </p>
-            <Button className='btn-stroke2'  padding='15px 35px' fontSize={40} type='secondary' title='Join Referral Race' onClick={joinReferralRace} />
+            <Button className='btn-stroke2'  padding='15px 35px' fontSize={35} type='secondary' title='Join Referral Race' onClick={joinReferralRace} />
             <div className="arrow-container arrow-container-farming">
               <img src={ArrowPrev} className="arrow-prev" alt="arrow-prev" onClick={() => carouselFarmingRef?.current?.prev()} />
               <img src={ArrowNext} className="arrow-next" alt="arrow-next" onClick={() => carouselFarmingRef?.current?.next()} />
