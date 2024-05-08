@@ -14,7 +14,7 @@ import Q22025 from '../images/q2_2025.png';
 import Q32025 from '../images/q3_2025.png';
 import ArrowPrev from '../images/arrow-prev.png';
 import ArrowNext from '../images/arrow-next.png';
-import { createRef, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 import { CarouselRef } from 'antd/es/carousel';
 import { isMobile } from '../utils';
 
@@ -236,6 +236,10 @@ const Home = () => {
       </div>
     </Carousel>
   }
+
+  useEffect(() => {
+    document.title = 'home';
+  }, []);
 
   return <div className="home container">
     <div className='home-banner'>

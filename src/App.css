@@ -76,7 +76,6 @@
 
 .roadmap-item img {
   display: inline-block !important;
-  width: 72px;
 }
 
 .arrow-container {
@@ -258,7 +257,9 @@ p.farming-description {
   justify-content: center;
 }
 
-tr[data-row-key="25631"] {
+/* TODO  */
+.your-row-telegram,
+.your-row-telegram:hover {
   background: #FFDC20;
 }
 
@@ -354,6 +355,10 @@ tr[data-row-key="25631"] {
 
   .roadmap-item{
     margin-bottom: 30px;
+  }
+
+  .roadmap-item img {
+    width: 72px;
   }
 
   .mobile-farming-1,

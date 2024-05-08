@@ -20,8 +20,7 @@ import { isMobile } from '../utils';
 const Airdrop = () => {
   const [airdropData, setAirdropData] = useState({
     yourRef: 'http://www.labdrill.com',
-    idTelegram: '490124124212',
-    rank: '25631',
+    idTelegram: '49012412421',
     avatars: [
       {
         image: avatar1
@@ -36,12 +35,10 @@ const Airdrop = () => {
         image: avatar4
       },
       {
-        total: '142k+'
+        image: '142k+'
       },
     ]
   });
-
-  const airdropTableRef = createRef<TableRef>();
 
   const columns = [
     {
@@ -78,10 +75,7 @@ const Airdrop = () => {
       dataIndex: 'id_telegram',
       key: 'id_telegram',
       render: (id_telegram: { image?: any, id?: string | number}) => {
-        if(id_telegram.id?.toString() === airdropData.idTelegram) {
-          
-        }
-        return <div id={`${id_telegram.id?.toString() === airdropData.idTelegram ? 'your_id_telegram' : ''}`}>
+        return <div>
           <Avatar style={{ marginRight: 4 }} src={id_telegram.image} />
           <span className='font-black'>#{id_telegram.id}</span>
         </div>;
@@ -187,12 +181,13 @@ const Airdrop = () => {
       referrals: '100k+',
       id_telegram: {
         image: '',
-        id: 490124124212,
+        id: 49012412421,
       }
     },
   ];
 
   useEffect(() => {
+    document.title = 'airdrop';
     // call Api get data airdrop
   }, []);
 
@@ -211,10 +206,11 @@ const Airdrop = () => {
     // Ranking Content 
     if(type === "ranking") {
       return <div className='airdrop-content'>
-        <Table 
+        <Table
+          rowClassName={(record) => record.id_telegram?.id?.toString() === airdropData.idTelegram?.toString() ? 'your-row-telegram' : ''}
           pagination={false} 
           columns={columns} 
-          dataSource={data} 
+          dataSource={data}
           scroll={{
             x: 375,
           }}

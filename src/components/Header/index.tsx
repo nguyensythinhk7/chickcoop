@@ -61,8 +61,8 @@ function Header({}) {
 
   const renderSocialAndPlayNow = () => {
     return <>
-      <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://x.com/chickcoop" />
-      <SocialIcon style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://t.me/chickcoop" />
+      <SocialIcon target='_blank' style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://x.com/@chickcoop_tg" />
+      <SocialIcon target='_blank' style={{ width: 36, height: 36 }} className='item-right' bgColor="#303647" fgColor='#fff' url="https://t.me/@chickcoop_announcement" />
       <OwnButton className='item-right' type='primary' title='Play Now' onClick={playNow} />
     </>
   }
